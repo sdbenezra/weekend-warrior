@@ -5,6 +5,7 @@ require_relative 'leap'
 
 # This Date class can be safely ignored.
 # It prevents using the Date class' leap? method.
+require_relative 'leap'
 class Date
   def leap?
     throw "Implement this yourself instead of using Ruby's implementation."
@@ -24,27 +25,27 @@ describe "Leap Year Test" do
   end
 
   it "Check non leap even year" do
-    skip
+    # skip
     expect(leap_year?(1998)).wont_equal true
   end
 
   it "Check century which is not a leap year" do
-    skip
+    # skip
     expect(leap_year?(1900)).wont_equal true
   end
 
   it "Check fourth_century" do
-    skip
+    # skip
     expect(leap_year?(2400)).must_equal true
   end
 
   it "Check Y2K" do
-    skip
+    # skip
     expect(leap_year?(2000)).must_equal true
   end
 
   it "Check very long long ago" do
-    skip
+    # skip
     expect(leap_year?(8)).must_equal true
   end
 end
